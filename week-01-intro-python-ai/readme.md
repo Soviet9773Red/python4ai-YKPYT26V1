@@ -24,3 +24,17 @@ I mitt eget exempel, där [samma uppgift](https://github.com/neurothrone/python-
 
 Detta illustrerar att Python inom AI inte bara är populärt på grund av bibliotek som pandas, scikit-learn eller TensorFlow, utan även för att språket minimerar teknisk friktion. När fokus ligger på experiment, modellträning och dataanalys är en enkel och förutsägbar exekveringsmodell en tydlig fördel.
 
+### [05. Reflection](https://github.com/neurothrone/python-for-ai/blob/main/week-01-intro-python-ai/03-input-output/05-reflection.md): Input and Output (repetitionsfrågor)
+1. Förklara skillnaden mellan input och output.<br>
+ Input är data som ett program tar emot från en användare eller en annan källa. Output är den information som programmet skickar tillbaka, till exempel till skärmen. Input möjliggör interaktion, medan output visar resultatet.
+2. Förklara varför input() kan orsaka typfel i matematiska operationer.<br>
+ Funktionen input() returnerar alltid en sträng. Om man använder värdet direkt i en matematisk beräkning kan Python ge ett typfel, eftersom matematiska operationer kräver numeriska datatyper som int eller float. Därför behöver man konvertera typen först.
+3. Förklara när f-strängar är tydligare än strängkonkatenering.<br>
+ F-strängar är tydligare när man vill infoga variabler direkt i en text. De gör koden mer läsbar eftersom man slipper använda flera +-operatorer och manuell typomvandling.
+
+**Kort reflektion**<br>
+Arbetet med grundläggande input och output kändes logiskt och relativt enkelt.<br>
+ Det som krävde mer uppmärksamhet var att förstå att input() alltid returnerar en sträng.<br>
+ Typomvandling mellan `str, int och float` var till en början något förvirrande.<br>
+ Jag behöver öva mer på [python string format](https://www.w3schools.com/python/python_string_formatting.asp) typkonvertering och att kombinera input med beräkningar.<br>
+
