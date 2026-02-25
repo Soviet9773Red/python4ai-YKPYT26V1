@@ -14,9 +14,13 @@ Write 3-5 sentences:
 
 ### Kort version (enligt uppgiften)
 
-Python används ofta inom AI eftersom språket har en tydlig och linjär exekveringsmodell som gör det lätt att fokusera på algoritmer och data istället för på tekniska detaljer kring körmiljön. I jämförelse med JavaScript kräver enklare uppgifter i Node eller webbläsaren ofta mer strukturell kod, till exempel asynkron hantering eller state-logik. Detta minskar den kognitiva belastningen i Python och gör språket särskilt lämpligt för experiment och prototyper inom AI.
+1. Jag använder AI i min vardag genom att arbeta med AI-baserade kodassistenter och chattverktyg som hjälper mig att analysera problem, generera kod och förklara tekniska koncept.
+2. Läsbar kod är särskilt viktig i AI-projekt eftersom modeller och dataprocesser ofta är komplexa. Om koden är tydlig och strukturerad blir det lättare att förstå experiment, reproducera resultat och samarbeta med andra utvecklare.   
+3. Ett av mina mål med kursen är att utveckla en stabil grund i Python för AI och kunna implementera enklare maskininlärningslösningar självständigt.
 
 ### Utökad version med hänvisning till exempel med Challenge04.py vs Challenge04.js
+
+Python används ofta inom AI eftersom språket har en tydlig och linjär exekveringsmodell som gör det lätt att fokusera på algoritmer och data istället för på tekniska detaljer kring körmiljön. I jämförelse med JavaScript kräver enklare uppgifter i Node eller webbläsaren ofta mer strukturell kod, till exempel asynkron hantering eller state-logik. Detta minskar den kognitiva belastningen i Python och gör språket särskilt lämpligt för experiment och prototyper inom AI.
 
 I kursmaterialet nämns att Python är populärt inom AI på grund av tydlig syntax och ett stort biblioteksekosystem. Det är korrekt, men en viktig aspekt är även exekveringsmodellen. Python är linjärt och blockerat, vilket innebär att koden körs steg för steg utan att påverkas av en yttre händelsemodell. Detta gör att utvecklaren kan fokusera direkt på algoritmer, matematik och databehandling.
 
