@@ -22,7 +22,7 @@ I kursmaterialet nämns att Python är populärt inom AI på grund av tydlig syn
 
 I mitt eget exempel, där [samma uppgift](https://github.com/neurothrone/python-for-ai/blob/main/week-01-intro-python-ai/04-data-types-variables/04-challenge.md) implementerades både i [Python](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/week-01-intro-python-ai/Challenge04_Input_Output.py) och i [JavaScript](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/week-01-intro-python-ai/Challenge04_Input_Output_Node.js), blev skillnaden tydlig. Python-versionen kunde skrivas med en enkel while-loop och input(), medan Node-versionen krävde readline, async/await och hantering av asynkron logik. Webbläsarversionen krävde dessutom en state-modell och händelsehantering. Den funktionella logiken var densamma, men mängden kringkod och den mentala belastningen var större i JavaScript-miljöerna.
 
-Detta illustrerar att Python inom AI inte bara är populärt på grund av bibliotek som pandas, scikit-learn eller TensorFlow, utan även för att språket minimerar teknisk friktion. När fokus ligger på experiment, modellträning och dataanalys är en enkel och förutsägbar exekveringsmodell en tydlig fördel.
+Detta illustrerar att Python inom AI inte bara är populärt på grund av bibliotek som `pandas`, `scikit-learn` eller `TensorFlow`, utan även för att språket minimerar teknisk friktion. När fokus ligger på experiment, modellträning och dataanalys är en enkel och förutsägbar exekveringsmodell en tydlig fördel.
 
 ### [05. Reflection Input and Output](https://github.com/neurothrone/python-for-ai/blob/main/week-01-intro-python-ai/03-input-output/05-reflection.md):  (repetitionsfrågor)
 1. Förklara skillnaden mellan input och output.<br>
