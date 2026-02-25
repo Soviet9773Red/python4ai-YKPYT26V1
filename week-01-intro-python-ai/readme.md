@@ -42,7 +42,7 @@ Arbetet med grundläggande input och output kändes logiskt och relativt enkelt.
  Typomvandling mellan `str, int och float` var till en början något förvirrande.<br>
  Jag behöver öva mer på [python string format](https://www.w3schools.com/python/python_string_formatting.asp) typkonvertering och att kombinera input med beräkningar.<br>
 
- ### 01-04-05 Reflection: Data Types and Variables [link](https://github.com/neurothrone/python-for-ai/blob/main/week-01-intro-python-ai/04-data-types-variables/05-reflection.md)
+ ### [01-04-05](https://github.com/neurothrone/python-for-ai/blob/main/week-01-intro-python-ai/04-data-types-variables/05-reflection.md) Reflection: Data Types and Variables
 **Recall Questions**
 
 1- Explain why type conversion matters when reading user input.<br>
@@ -57,3 +57,21 @@ Funktionen `input()` returnerar alltid en sträng. För att kunna göra matemati
 
 3. Hur förbättrar tydliga variabelnamn läsbarheten?<br>
 Beskrivande variabelnamn gör koden lättare att förstå och följa. De visar tydligt vad värdena representerar och förenklar underhåll och felsökning.
+
+## 01-04-05 Micro Reflection
+
+Write 3–4 lines:
+
+- Describe which data type is easiest for you right now.
+- Describe which operation needs more practice.
+- Describe your plan for the next practice session.
+
+### ***Svar***
+
+Det är något svårt att ge ett helt balanserat svar, eftersom genomgången av datatyper har varit ojämnt fördelad. Strängar `str` och heltal `int` har fått mest praktiskt fokus, medan flyttal `float` och särskilt booleska värden `bool` främst har nämnts teoretiskt.
+
+Det tillhörande videomaterialet, där Zane på ett tydligt och pedagogiskt sätt förklarar grunderna, är väl genomfört. Däremot behandlas inte booleska värden i någon större utsträckning där heller, och vi har inte fått arbeta praktiskt med logiska operationer eller typomvandling kopplad till `bool`.
+
+För att skapa en mer komplett förståelse har jag därför själv gjort en fördjupad genomgång av booleska värden och jämförelser i en separat [Boolean_Python_vs_JavaScript_SE.md](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/week-01-intro-python-ai/Boolean_Python_vs_JavaScript_SE.md). Just nu känns strängar och heltal mest naturliga att arbeta med, men jag vill fortsätta öva på logiska operationer och kombinera olika datatyper i kommande uppgifter.
+
+Ett önskemål framåt är att även inkludera praktiska övningar kring booleska uttryck och logiska operatorer, så att teorin och tillämpningen blir mer balanserade.
