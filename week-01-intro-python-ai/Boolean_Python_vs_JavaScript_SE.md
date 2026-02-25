@@ -117,13 +117,10 @@ if x == True:
 JavaScript har två jämförelseoperatorer:
 ```
 if (x === true) {
-
 }
+// ==   med typomvandling\
+// ===  strikt jämförelse (rekommenderas)
 
-/*
-==   med typomvandling\
-===  strikt jämförelse (rekommenderas)
-*/
 ```
 
 
