@@ -11,3 +11,6 @@ Syftet med repositoryt är att:
 - fungera som referens vid diskussioner under utbildningen,
 - dokumentera min progression genom kursen.
 - Endast genomgångna och testade lösningar publiceras här.
+
+
+[Challenge04_Input_OutputV1.html](https://soviet9773red.github.io/python4ai-YKPYT26V1/week-01-intro-python-ai/web/)
