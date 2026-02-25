@@ -1,0 +1,143 @@
+<!--
+Build a short profile collector (name, age, country, favorite topic) and print a 2-line summary.
+Ask for temperature in Celsius and print a rough Fahrenheit conversion.
+Ask for three numbers and print their average.
+Challenge04_Input_OutputV1.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 04 - Browser Console</title>
+<style>
+body { background:#111; color:#0f0; font-family:monospace; }
+#console {
+    width: 100%;
+    height: 300px;
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+#input {
+    width: 20%;
+}
+</style>
+</head>
+<body>
+
+<div id="console"></div>
+<input id="input" type="text" placeholder="Enter command number fom Menu">
+
+<script>
+const info = " neurothrone / python-for-aipython-for-ai / week-01-intro-python-ai / 03-input-output / 04-challenge.md\n"
+const consoleDiv = document.getElementById("console");
+const inputField = document.getElementById("input");
+inputField.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        handleInput();
+    }
+});
+
+let state = "menu";
+let tempData = {};
+
+function print(text) {
+    consoleDiv.innerText += text + "\n";
+    consoleDiv.scrollTop = consoleDiv.scrollHeight;
+}
+
+function showMenu() {
+    print(`
+Menu.
+1. Profile Collector
+2. Temperature Converter
+3. Average Calculator
+4. Exit
+`);
+}
+
+function handleInput() {
+    const value = inputField.value.trim();
+    inputField.value = "";
+	    if (value === "") return;
+		print("> " + value);
+
+    if (state === "menu") {
+        if (value === "1") {
+            state = "profile_name";
+            print("Profile Collector");
+            print("Name?");
+        }
+        else if (value === "2") {
+            state = "temp";
+            print("Temperature in Celsius?");
+        }
+        else if (value === "3") {
+            state = "avg1";
+            print("First number?");
+        }
+        else if (value === "4") {
+            print("Goodbye!");
+        }
+        else {
+            print("Invalid choice.");
+        }
+    }
+
+    else if (state === "profile_name") {
+        tempData.name = value;
+        state = "profile_age";
+        print("Age?");
+    }
+    else if (state === "profile_age") {
+        tempData.age = value;
+        state = "profile_country";
+        print("Country?");
+    }
+    else if (state === "profile_country") {
+        tempData.country = value;
+        state = "profile_topic";
+        print("Favorite topic?");
+    }
+    else if (state === "profile_topic") {
+        tempData.topic = value;
+        print(`Name: ${tempData.name}, Age: ${tempData.age} Country: ${tempData.country}, Favorite topic: ${tempData.topic}`);
+        state = "menu";
+        showMenu();
+    }
+
+    else if (state === "temp") {
+        const c = parseFloat(value);
+        const f = c * 9/5 + 32;
+        print(`Temperature in Fahrenheit: ${f.toFixed(2)}`);
+        state = "menu";
+        showMenu();
+    }
+
+    else if (state === "avg1") {
+        tempData.n1 = parseFloat(value);
+        state = "avg2";
+        print("Second number?");
+    }
+    else if (state === "avg2") {
+        tempData.n2 = parseFloat(value);
+        state = "avg3";
+        print("Third number?");
+    }
+    else if (state === "avg3") {
+        tempData.n3 = parseFloat(value);
+        const avg = (tempData.n1 + tempData.n2 + tempData.n3) / 3;
+        print(`Average: ${avg.toFixed(2)}`);
+        state = "menu";
+        showMenu();
+    }
+}
+
+print(info);
+showMenu();
+
+</script>
+</body>
+</html>
