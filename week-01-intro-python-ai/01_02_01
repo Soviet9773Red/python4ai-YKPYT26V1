@@ -1,0 +1,58 @@
+Start Python in Windows
+1. Check installed versions
+python --version
+py -0
+
+2. Run default Python
+python
+
+This runs the version registered in your system PATH.
+In my case: 3.13.12
+
+3. Run via Python Launcher
+py
+
+This runs the default version configured in the Python Launcher.
+In your case: 3.14.3
+
+4. Run a specific Python version
+py -3.13
+py -3.14
+
+5. Run a Python file
+python main.py
+py main.py
+py -3.14 main.py
+
+
+Notepad++ → Run Cheat Sheet
+1. Run a Python file
+
+Go to: Run → Run…
+Insert:  cmd /k py -3.14 "$(FULL_CURRENT_PATH)"
+
+Or if you want to use the PATH version:
+cmd /k python "$(FULL_CURRENT_PATH)"
+
+
+2. Run Node.js file
+cmd /k node "$(FULL_CURRENT_PATH)"
+
+
+3. What the variables mean
+
+$(FULL_CURRENT_PATH) – full path to the current file
+$(CURRENT_DIRECTORY) – current working directory
+$(FILE_NAME) – file name only
+
+
+4. Change directory first, then run
+cmd /k cd "$(CURRENT_DIRECTORY)" && py -3.14 "$(FILE_NAME)"
+
+
+Quick Rules
+
+python – version from PATH
+py – Python version launcher
+cmd /k – execute and keep console open
+cmd /c – execute and close console
