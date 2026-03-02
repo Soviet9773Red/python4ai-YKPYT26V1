@@ -13,5 +13,5 @@ Syftet med repositoryt är att:
 - Endast genomgångna och testade lösningar publiceras här.
 
 
-[Vecka 1 [v. 09-2026]](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/tree/main/week-01-intro-python-ai)
+[Vecka 1 [v. 09-2026]](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/tree/main/week-01-intro-python-ai)<br>
 [Vecka 2 [v. 10-2026]]
