@@ -1,8 +1,5 @@
 neurothrone / python-for-ai [uppgifter](https://github.com/neurothrone/python-for-ai/tree/main/week-01-intro-python-ai)
 
-03-input-output<br>
-[04. Challenge: Input and Output.html](https://soviet9773red.github.io/python4ai-YKPYT26V1/week-01-intro-python-ai/web/Challenge04_Input_Output.html) - Python clone in JS
-
 ## 01-01-01 Mini Activity
 
 Write 3-5 sentences:
@@ -19,6 +16,9 @@ Write 3-5 sentences:
 3. Ett av mina mål med kursen är att utveckla en stabil grund i Python för AI och kunna implementera enklare maskininlärningslösningar självständigt.
 
 ### 01-03-04 Utökad version med hänvisning till exempel med Challenge04.py vs Challenge04.js
+
+03-input-output<br>
+[04. Challenge: Input and Output.html](https://soviet9773red.github.io/python4ai-YKPYT26V1/week-01-intro-python-ai/web/Challenge04_Input_Output.html) - Python clone in JS
 
 Python används ofta inom AI eftersom språket har en tydlig och linjär exekveringsmodell som gör det lätt att fokusera på algoritmer och data istället för på tekniska detaljer kring körmiljön. I jämförelse med JavaScript kräver enklare uppgifter i Node eller webbläsaren ofta mer strukturell kod, till exempel asynkron hantering eller state-logik. Detta minskar den kognitiva belastningen i Python och gör språket särskilt lämpligt för experiment och prototyper inom AI.
 
