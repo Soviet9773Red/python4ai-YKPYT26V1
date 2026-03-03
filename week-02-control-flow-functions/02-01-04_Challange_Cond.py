@@ -35,7 +35,7 @@ def three_num():
     # For example, the years 1700, 1800, and 1900 were not leap years, but the years 1600 and 2000 were.
 def leap_y():
     print("> Leap year game")
-    y = int(input("Enter year to leap: "))   
+    y = int(input("Take a leap! Enter year: "))
     print("This year is leap\n"
           if (y % 400 == 0 or (y % 4 == 0 and y % 100 != 0)) else 
           "This year not leap\n")
@@ -68,6 +68,7 @@ def main():
         )
 
         menu = False if choice == "4" else True
+
 
 
 main()
