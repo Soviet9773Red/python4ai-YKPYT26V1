@@ -320,7 +320,7 @@ def calc(op, x, y):
     
 print(calc("*", 8, 9))
 ```
-***Why lambda: None Is Used Instead of None***
+**Why `lambda: None` Is Used Instead of `None`**
 
 In this expression:```.get(op, lambda: None)()```
 
@@ -340,7 +340,7 @@ To avoid this, we use:`lambda: None`
 This is a function that simply returns `None`.
 Since it is a function, it can be safely called with `()`.
 
-***What lambda Does Here***
+**What `lambda` Does Here**
 
 `lambda: None` creates an anonymous function that:
 - takes no arguments
