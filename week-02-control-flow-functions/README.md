@@ -41,19 +41,29 @@ list1 = [int(input(f"Enter n{n}: ")) for n in range(3)]
 ```
 The bug appeared when the user pressed Enter without typing a number.
 input() returned '', and int('') or float('') raised a ValueError.
-In the list comprehension version the program crashed immediately, because there was no validation before conversion.
+Both versions crashed for the same reason - I converted user input before validating it. The issue was not the loop or the list comprehension itself, but missing input validation before type conversion.<br>
+Example of the error:
 ```
 if just Enter, then  
     list1 = [float(input(f"Enter n{n}: ")) for n in range(N)]
              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: could not convert string to float: ''
 ```
+I fixed it by separating validation from conversion and handling errors explicitly:
+```
+for n in range(3):
+    while True:
+        try:
+            value = int(input(f"Enter n{n}: "))
+            list1.append(value)
+            break
+        except ValueError:
+            print("Invalid input. Try again.")
+```
 
+Next time I will always validate user input before converting types and avoid combining input, validation, and conversion in a single expression.
 
-I fixed it by separating input validation from conversion and handling errors in a loop or helper function.
-Next time I will validate input before type conversion and avoid complex one-line expressions for user input logic.
-
-I also tried to combine validation and conversion inside a lambda expression, but it reduced readability and made debugging harder.
+I also experimented with lambda expressions for validation, but this reduced readability and made debugging harder.
 
 Olicka varianter med Three numbers funktion:
 ```
