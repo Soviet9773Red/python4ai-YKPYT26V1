@@ -43,7 +43,7 @@ The bug appeared when the user pressed Enter without typing a number.
 input() returned '', and int('') or float('') raised a ValueError.
 In the list comprehension version the program crashed immediately, because there was no validation before conversion.
 ```
- list1 = [float(input(f"Enter n{n}: ")) for n in range(N)] , if just Enter, then   File "d:\_PROG_STUDIES\ITHS\Phyton4AI\week2\02-01-04_Challange_Cond.py", line 35, in three_num
+if just Enter, then  
     list1 = [float(input(f"Enter n{n}: ")) for n in range(N)]
              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: could not convert string to float: ''
