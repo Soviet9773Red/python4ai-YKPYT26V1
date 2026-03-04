@@ -218,6 +218,8 @@ def main():
 ```
 This simplifies control flow because the function ends immediately, and no additional flags are needed.
 
+[↑ Contents](#contents)
+
 ### 5. Using a Ternary Expression for Menu Logic
 
 I experimented with nested ternary expressions to implement a compact, switch-like menu:
