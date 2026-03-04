@@ -9,7 +9,7 @@
   - [4. Using return to Exit the Loop](#4-using-return-to-exit-the-loop)
   - [5. Using a Ternary Expression for Menu Logic](#5-using-a-ternary-expression-for-menu-logic)
   - [Conclusion Loops](#conclusion-loops)
-  - [Lambda function](lambda-function)
+  - [Lambda function](#lambda-function)
 
 
 ## 02-01-05. Reflection: Conditionals
