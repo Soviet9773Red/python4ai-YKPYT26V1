@@ -9,6 +9,7 @@
   - [3. Using a Condition Directly in the while Statement](#3-using-a-condition-directly-in-the-while-statement)
   - [4. Using return to Exit the Loop](#4-using-return-to-exit-the-loop)
   - [5. Using a Ternary Expression for Menu Logic](#5-using-a-ternary-expression-for-menu-logic)
+  - [6. Using a Dictionary of Actions Instead of Multiple Conditionals](#6-using-a-dictionary-of-actions-instead-of-multiple-conditionals)
   - [Conclusion Loops](#conclusion-loops)
   - [Lambda function](#lambda-function)
 
