@@ -8,7 +8,8 @@
   - [3. Using a Condition Directly in the while Statement](#3-using-a-condition-directly-in-the-while-statement)
   - [4. Using return to Exit the Loop](#4-using-return-to-exit-the-loop)
   - [5. Using a Ternary Expression for Menu Logic](#5-using-a-ternary-expression-for-menu-logic)
-  - [Conclusion](#conclusion)
+  - [Conclusion Loops](#conclusion-loops)
+  - [Lambda function](lambda-function)
 
 
 ## 02-01-05. Reflection: Conditionals
@@ -158,7 +159,7 @@ I also experimented with using nested ternary expressions inside the loop:
 ```
 Although this approach works and keeps the code compact, it reduces readability and becomes harder to debug as the program grows. It combines branching logic and function calls into a single expression, which is not typical Python style.
 
-### Conclusion
+### Conclusion Loops
 
 I learned that controlling a while loop can be done in several valid ways:
 
@@ -171,3 +172,19 @@ I learned that controlling a while loop can be done in several valid ways:
 The key insight is that loop control is not just about syntax. It affects program structure, readability, and maintainability. Choosing the right approach depends on context and complexity.
 
 [↑ Contents](#contents)
+
+## Lambda function
+
+### Switch/Case emulator 
+
+```
+def calc(op, x, y):
+    return {
+        '+': lambda: x + y,
+        '-': lambda: x - y,
+        '*': lambda: x * y,
+        '/': lambda: x / y,
+    }.get(op, lambda: None)()
+    
+print(calc("*", 8, 9))
+```
