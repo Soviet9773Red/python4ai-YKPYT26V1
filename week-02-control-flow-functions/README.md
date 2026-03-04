@@ -178,7 +178,7 @@ are commonly used to provide defaults in CLI programs.
 
 # Additional Reflection: Different Ways to Control a `while` Loop
 
-While working on my menu system and input validation, I explored several ways to control a while loop. I realized that there are multiple valid approaches, each with different implications for readability and structure.
+While working on my menu system and input validation, I explored several ways to control a while loop. I realized that there are multiple valid approaches, each with different implications for readability and structure. Example in [02-01-04_Challange_Cond.py](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/week-02-control-flow-functions/02-01-04_Challange_Cond.py)
 
 ### 1. while True + break
 
