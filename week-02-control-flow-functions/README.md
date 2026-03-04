@@ -320,3 +320,38 @@ def calc(op, x, y):
     
 print(calc("*", 8, 9))
 ```
+***Why lambda: None Is Used Instead of None***
+
+In this expression:```.get(op, lambda: None)()```
+
+.get(op, default) returns:
+- the function mapped to op if the key exists
+- otherwise the default value
+
+If we used: `.get(op, None)()`
+
+and the key did not exist, .get() would return `None`.<br>
+Then Python would try to execute:```None()```
+
+which raises:```TypeError: 'NoneType' object is not callable```
+
+To avoid this, we use:`lambda: None`
+
+This is a function that simply returns `None`.
+Since it is a function, it can be safely called with `()`.
+
+***What lambda Does Here***
+
+`lambda: None` creates an anonymous function that:
+- takes no arguments
+- returns None
+
+So the logic becomes:
+1. Get a function from the dictionary
+2. If the key does not exist, get a safe fallback function
+3. Call the returned function
+
+This guarantees that the expression always returns a callable object, preventing runtime errors.
+
+[↑ Contents](#contents)
+
