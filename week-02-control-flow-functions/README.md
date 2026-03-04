@@ -2,6 +2,7 @@
 - [02-01-05. Reflection: Conditionals](#02-01-05-reflection-conditionals)
   - [Recall Questions](#recall-questions)
   - [Micro Reflection](#micro-reflection)
+- [Additional Note to Conditionals: How `or` Works in Python](#additional-note-to-conditionals:-how-or-works-in-python)    
 - [Additional Reflection: Different Ways to Control a while Loop](#additional-reflection-different-ways-to-control-a-while-loop)
   - [1. while True + break](#1-while-true--break)
   - [2. Controlling the Loop with a State Variable](#2-controlling-the-loop-with-a-state-variable)
@@ -104,6 +105,75 @@ def three_num():
 <hr>
 
 [↑ Contents](#contents)
+
+
+# Additional Note to Conditionals: How `or` Works in Python
+
+In Python, `or` does not simply return True or False.
+It returns one of the actual values.<br>
+Rule: ``` result = A or B ```
+or returns: - the first **truthy** value or the last value if all values are falsy<br>
+Example from my code: ```N = int(input("> Enter amount (default 3): ") or 3)``` 
+
+Step by step:
+1. input() returns a string.
+2. If the user presses Enter → ""
+3. "" is falsy.
+4. "" or 3 → returns 3
+5. int(3) → 3
+
+So `or` works as a value selector, not just a logical operator.
+
+| A | B | A or B |
+|---|---|--------|
+|""  `False` | 3 | 3 |
+|"abc" `True`| 3 |"abc"|
+|0    `False`| 5 | 5 |
+|10    `True`| 5 | 10 |
+
+Important Concept: Truthy and Falsy Values
+
+Falsy values in Python include:<br>
+* "" (empty string)
+* 0
+* False
+* None
+* empty collections like [], {}, ()
+
+Everything else is considered truthy.
+
+More Examples:
+```
+"" or 3            # → 3
+"hello" or 3       # → "hello"
+0 or 5             # → 5
+10 or 5            # → 10
+False or "text"    # → "text"
+None or "default"  # → "default"
+```
+
+***Comparison with `and`***<br>
+`and` works differently:
+```
+"hello" and "world"   # → "world"
+"" and "world"        # → ""
+```
+Rule for and:
+- returns the first falsy value
+- or the last value if all are truthy
+
+***Key Insight***
+
+In Python, or and and are not only logical operators.
+They are also value-selection operators.
+
+This explains why expressions like:
+```input_value or default_value```
+are commonly used to provide defaults in CLI programs.
+
+[↑ Contents](#contents)
+----------------------------------------------------------------------
+
 
 # Additional Reflection: Different Ways to Control a `while` Loop
 
