@@ -102,6 +102,8 @@ def three_num():
 ```
 <hr>
 
+[↑ Contents](#contents)
+
 # Additional Reflection: Different Ways to Control a `while` Loop
 
 While working on my menu system and input validation, I explored several ways to control a while loop. I realized that there are multiple valid approaches, each with different implications for readability and structure.
@@ -168,3 +170,4 @@ I learned that controlling a while loop can be done in several valid ways:
 
 The key insight is that loop control is not just about syntax. It affects program structure, readability, and maintainability. Choosing the right approach depends on context and complexity.
 
+[↑ Contents](#contents)
