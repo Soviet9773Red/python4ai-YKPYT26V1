@@ -10,23 +10,26 @@ def grade_checker():
     print("Grade checker game.")
     grade = int(input("> Enter your grade (0 - 100): "))
     res = (
-        "Newbie" if grade >= 0  and grade <   20 else
-        "Rookie" if grade >= 20  and grade <   40 else
-        "Talented" if grade >= 40  and grade <   55 else
-        "Skilled" if grade >= 55  and grade <   70 else
-        "Advanced" if grade >= 70  and grade <  95 else
-        "Expert" if grade >= 95 and grade <= 100 else
-        "wrong input!"
-        )
-    print("> Your level is: " + res if res!="wrong input!"  else res)
+        "wrong input!\n" if (grade < 0 or grade > 100) else
+        "Newbie\n" if grade < 20 else
+        "Rookie\n" if grade < 40 else
+        "Talented\n" if grade < 55 else
+        "Skilled\n" if grade < 70 else
+        "Advanced\n" if grade < 95 else
+        "Expert\n"
+    )
+    print("> Your level is: " + res if res!="wrong input!\n" else res)
 
 # 2. Three numbers
 def three_num():
-    list1 = []
-    print("> Three numbers (n1-n3) game.")
-    for n in range(3):
-        list1.append( float(input(f"Enter n{n}: ")) )
-    print (f"Max: {max(list1)} / Min: {min(list1)} / Avg: {sum(list1)/3:.2f}")
+    print("> Numbers (n1-nx) game.")
+    #N = (lambda x: int(x) if x else 3)(input("> Enter amount (default 3): "))
+    N = int( input("> Enter amount (default 3): ") or 3 )
+    
+    get_num = lambda n: (lambda x: float(x) if x else 0.0)(input(f"Enter n{n}: "))
+    list1 = [get_num(n) for n in range(N)]
+    
+    print(f"Max: {max(list1)} / Min: {min(list1)} / Avg: {sum(list1)/N:.3f}")
 
 # 3. Leap year
     # Every year that is exactly divisible by four is a leap year, 
@@ -43,7 +46,7 @@ def leap_y():
 # 0. Show menu
 def show_menu():
     print(
-        "\n0. Show menu.\n==========\n"
+        "\n0. Show menu.\n============\n"
         "1. Grade checker\n"
         "2. Three numbers game\n"
         "3. Leap year calculator\n"
@@ -55,7 +58,7 @@ def main():
     menu = True
     while menu:
 
-        choice = input("menu(0):> ")
+        choice = input("0. Show menu:> ")
 
         (
             show_menu() if choice == "0" else
