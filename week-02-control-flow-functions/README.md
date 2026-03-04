@@ -219,15 +219,74 @@ This simplifies control flow because the function ends immediately, and no addit
 
 ### 5. Using a Ternary Expression for Menu Logic
 
-I also experimented with using nested ternary expressions inside the loop:
+I experimented with nested ternary expressions to implement a compact, switch-like menu:
 ```
 (
     show_menu() if choice == "0" else
     grade_checker() if choice == "1" else
-    ...
+    three_num() if choice == "2" else
+    leap_y() if choice == "3" else
+    print("> Exiting ...") if choice == "4" else
+    print("> Invalid input")
 )
 ```
-Although this approach works and keeps the code compact, it reduces readability and becomes harder to debug as the program grows. It combines branching logic and function calls into a single expression, which is not typical Python style.
+This approach can be concise and works well when each branch is small and the structure is clear. It acts like a compact switch-case.
+The trade-off is that as the number of branches grows, it may become harder to scan and debug compared to multi-line `if/elif` or a dictionary of actions. In practice, it works best when the branches remain simple and the chain stays short.
+
+Rule of thumb I learned: ternary chains are fine for small, predictable menus, but for larger menus a dictionary mapping often scales better.
+
+### 6. Using a Dictionary of Actions Instead of Multiple Conditionals
+
+When implementing a menu system, instead of chaining if/elif or using nested ternary expressions, we can map choices directly to functions using a dictionary.
+
+***Basic Version***
+```
+actions = {
+    "0": show_menu,
+    "1": grade_checker,
+    "2": three_num,
+    "3": leap_y,
+}
+
+choice = input("Choice: ")
+
+if choice in actions:
+    actions[choice]()
+elif choice == "4":
+    print("> Exiting ...")
+else:
+    print("> Invalid input")
+```
+How It Works
+- The dictionary keys represent user choices.
+- The values are function references (not function calls).
+- actions[choice]() executes the selected function.
+
+*Important detail:*<br>
+`show_menu` is stored without parentheses.
+If we wrote `show_menu()`, the function would execute immediately when the dictionary is created.
+
+***More Compact Version***
+
+We can make it more concise using dict.get():
+```
+actions = {
+    "0": show_menu,
+    "1": grade_checker,
+    "2": three_num,
+    "3": leap_y,
+    "4": lambda: print("> Exiting ..."),
+}
+
+actions.get(choice, lambda: print("> Invalid input"))()
+```
+What get() Does: ```actions.get(choice, default)```
+- If choice exists → returns the mapped function.
+- If not → returns the default function.
+- The final () executes the returned function.
+
+This eliminates the need for long conditional chains.
+
 
 ### Conclusion Loops
 
