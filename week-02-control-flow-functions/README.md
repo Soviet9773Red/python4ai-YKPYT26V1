@@ -2,7 +2,7 @@
 - [02-01-05. Reflection: Conditionals](#02-01-05-reflection-conditionals)
   - [Recall Questions](#recall-questions)
   - [Micro Reflection](#micro-reflection)
-- [Additional Note to Conditionals: How `or` Works in Python](#additional-note-to-conditionals:-how-or-works-in-python)    
+- [Additional Note to Conditionals: How `or` Works in Python](#additional-note-to-conditionals-how-or-works-in-python)    
 - [Additional Reflection: Different Ways to Control a while Loop](#additional-reflection-different-ways-to-control-a-while-loop)
   - [1. while True + break](#1-while-true--break)
   - [2. Controlling the Loop with a State Variable](#2-controlling-the-loop-with-a-state-variable)
