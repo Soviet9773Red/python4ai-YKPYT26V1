@@ -20,14 +20,14 @@
 3. Why is input conversion important for numeric checks?
 
 Skillnaden mellan if och elif:<br>
-if är första villkoret och kontrolleras alltid. <br>
-elif testas bara om föregående villkor var falskt. Det används för flera alternativa villkor i samma beslut.
+`if` är första villkoret och kontrolleras alltid. <br>
+`elif` testas bara om föregående villkor var falskt. Det används för flera alternativa villkor i samma beslut.
 
-Varför använder vi == i villkor?<br>
-== jämför värden. = används för tilldelning. I en villkorssats måste vi jämföra, inte tilldela.
+Varför använder vi `==` i villkor?<br>
+`==` jämför värden. `=` används för tilldelning. I en villkorssats måste vi jämföra, inte tilldela.
 
 Varför är typomvandling av input viktig vid numeriska kontroller?<br>
-input() returnerar alltid en sträng. För att kunna jämföra eller räkna med tal måste värdet omvandlas till t.ex. int eller float.
+`input()` returnerar alltid en sträng. För att kunna jämföra eller räkna med tal måste värdet omvandlas till t.ex. int eller float.
 
 
 ## Micro Reflection
