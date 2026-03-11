@@ -133,7 +133,7 @@ ________________________________________
 
 En viktig egenskap är att iteratorer normalt kan användas bara en gång.
 
-[Exempel:](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/python-for-ai/week-03-oop/PrimeNumber.py) 
+[Exempel:](https://github.com/Soviet9773Red/python4ai-YKPYT26V1/blob/main/week-03-oop/PrimeNumber.py)
 ```
 f = filter(is_prime, range(10))
 
