@@ -1,6 +1,6 @@
 ### Python: från språkets arkitektur till klasser
 
-1. Grundprincipen i Python
+**1. Grundprincipen i Python**
 En viktig idé i Python är: allt är objekt.<br>
 Det betyder att nästan varje sak i språket representeras internt som ett objekt i minnet.
 
@@ -25,7 +25,8 @@ Resultat:
 ```
 Detta visar att värdet inte bara är ett tal utan ett objekt av klassen int.<br>
 ________________________________________
-2. Objekt och attribut
+**2. Objekt och attribut**
+   
 Eftersom allt är objekt kan de ha:
 attribut (data)
 metoder (funktioner kopplade till objektet)
@@ -41,7 +42,8 @@ Exempel:<br>
 ```text.upper()```
 Här anropas en metod som tillhör objektet.<br>
 ________________________________________
-3. Vad är egentligen en funktion i Python
+
+**3. Vad är egentligen en funktion i Python**
 En funktion i Python är också ett objekt.
 Exempel:
 ```
@@ -63,7 +65,8 @@ f = add
 print(f(2,3))
 ```
 ________________________________________
-4. Iteration och objekt
+
+**4. Iteration och objekt**
    
 När vi använder konstruktioner som
 ```
@@ -93,7 +96,8 @@ value = iterator.__next__()
 Det betyder att iteration fungerar eftersom objektet innehåller vissa metoder.
 ________________________________________
 
-5. Specialmetoder i Python
+**5. Specialmetoder i Python**
+
 Python använder många speciella metoder som börjar och slutar med dubbla understreck.
 Exempel:<br>
 ```
@@ -112,7 +116,9 @@ Python gör egentligen:
 my_list.__len__()
 ```
 ________________________________________
-6. Hur klasser passar in i denna arkitektur
+
+**6. Hur klasser passar in i denna arkitektur**
+
 Eftersom allt i Python är objekt måste även objekt själva skapas från någon struktur.
 Den strukturen är en klass.
 En klass beskriver:
@@ -126,58 +132,81 @@ class Dog:
 ```
 Nu har vi skapat en ny typ.
 ________________________________________
-7. Att skapa ett objekt
+
+**7. Att skapa ett objekt**
+
 När vi skriver:<br>
 ```
 dog = Dog()
 ```
 
-sker flera saker:
+sker flera saker:<br>
 1 Python skapar ett nytt objekt i minnet
 
 2 Python anropar en speciell metod
+```
 __init__()
+```
 ________________________________________
-8. Rollen av init
+
+**8. Rollen av init**
+
 Metoden __init__ används för att initialisera objektet.
 Exempel:
+```
 class Dog:
 
     def __init__(self, name):
         self.name = name
-När vi skriver:
+```
+
+När vi skriver:<br>
+```
 dog = Dog("Buddy")
-gör Python ungefär detta:
+```
+gör Python ungefär detta:<br>
+
 1 skapa objekt
 2 anropa Dog.__init__(dog, "Buddy")
 ________________________________________
-9. Vad är self
+
+**9. Vad är self**
+    
 self är bara en referens till det aktuella objektet.
 Det gör att metoden vet vilket objekt den arbetar med.
-Exempel:
+Exempel:<br>
+```
 dog1 = Dog("Buddy")
 dog2 = Dog("Max")
+```
 Varje objekt får sina egna attribut:
+```
 dog1.name
 dog2.name
+```
 ________________________________________
-10. Sammanfattning
+
+**10. Sammanfattning**
+
 Arkitekturen kan beskrivas i följande nivåer:
-Python runtime
-    ↓
-allt är objekt
-    ↓
-objekt har attribut och metoder
-    ↓
-speciella metoder styr språkets beteende
-    ↓
-klasser definierar nya typer av objekt
-    ↓
-__init__ initialiserar objekt
+
+Python runtime<br>
+    ↓<br>
+allt är objekt<br>
+    ↓<br>
+objekt har attribut och metoder<br>
+    ↓<br>
+speciella metoder styr språkets beteende<br>
+    ↓<br>
+klasser definierar nya typer av objekt<br>
+    ↓<br>
+__init__ initialiserar objekt<br>
 ________________________________________
-11. Varför detta är viktigt
-Den objektorienterade modellen gör det möjligt att:
-organisera kod
-modellera verkliga system
-återanvända kod
+
+**11. Varför detta är viktigt**
+    
+Den objektorienterade modellen gör det möjligt att:<br>
+organisera kod<br>
+modellera verkliga system<br>
+återanvända kod<br>
 Men i Python är detta inte ett separat system - det är en naturlig konsekvens av språkets arkitektur där allt representeras som objekt.
