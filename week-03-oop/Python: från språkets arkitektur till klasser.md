@@ -1,9 +1,10 @@
-Python: från språkets arkitektur till klasser
+### Python: från språkets arkitektur till klasser
+
 1. Grundprincipen i Python
 En viktig idé i Python är:
 allt är objekt.
 Det betyder att nästan varje sak i språket representeras internt som ett objekt i minnet.
-Exempel:
+***Exempel:***
 heltal
 strängar
 listor
