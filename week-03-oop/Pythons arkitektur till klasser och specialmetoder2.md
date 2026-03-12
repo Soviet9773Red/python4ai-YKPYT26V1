@@ -1,4 +1,3 @@
-Här är en sammanhängande och lugnt uppbyggd svensk version som binder ihop hela kedjan:
 
 -   Pythons grundarkitektur
     
